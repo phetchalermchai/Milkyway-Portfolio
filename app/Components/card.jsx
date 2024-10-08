@@ -33,23 +33,23 @@ export default function Card({ src, title, text, footer ,demo ,github}) {
 
         {/* card action button */}
         <div className="mt-auto flex items-center justify-center gap-3 md:gap-4 xl:gap-5">
-            <Link href={demo} target="_blank">
-                <ButtonSmall cssStyle={`xl:hidden`} disabled={demo === "" ? true : false} pill={true}>
+            <Link href={demo} target="_blank" className="xl:hidden">
+                <ButtonSmall disabled={demo === "" ? true : false} pill={true}>
                     demo
                 </ButtonSmall>
             </Link>
-            <Link href={github} target="_blank">
-                <ButtonSmall cssStyle={`xl:hidden`} disabled={github === "" ? true : false} pill={true}>
+            <Link href={github} target="_blank" className="xl:hidden">
+                <ButtonSmall disabled={github === "" ? true : false} pill={true}>
                     github
                 </ButtonSmall>
             </Link>
-            <Link href={demo} target="_blank">
-                <ButtonMedium cssStyle={`hidden xl:block`} disabled={demo === "" ? true : false} pill={true}>
+            <Link href={demo} target="_blank" className="hidden xl:block">
+                <ButtonMedium disabled={demo === "" ? true : false} pill={true}>
                     demo
                 </ButtonMedium>
             </Link>
-            <Link href={github} target="_blank">
-                <ButtonMedium cssStyle={`hidden xl:block`} disabled={github === "" ? true : false} pill={true}>
+            <Link href={github} target="_blank" className="hidden xl:block">
+                <ButtonMedium disabled={github === "" ? true : false} pill={true}>
                     github
                 </ButtonMedium>
             </Link>
