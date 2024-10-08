@@ -3,8 +3,6 @@ import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
 import { ThemeProvider } from "./ThemeProvider";
 
-
-
 export const metadata = {
   title: 'My Portfolio',
   description: 'Welcome to my portfolio',

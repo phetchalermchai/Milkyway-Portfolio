@@ -12,11 +12,11 @@ export default function Card({ src, title, text, footer ,demo ,github}) {
 
         {/* card image */}
         <Image
-          className="rounded-t-m object-cover"
+          className="rounded-t-m object-cover w-auto h-full"
           src={src}
           width={400}
           height={331}
-          alt="cat"
+          alt={title}
         />
 
         {/* card title & card text */}

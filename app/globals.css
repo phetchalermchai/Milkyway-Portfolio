@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* styles/globals.css */
 @font-face {
   font-family: 'Roboto';
@@ -358,3 +359,4 @@ body {
     text-wrap: balance;
   }
 }
+
