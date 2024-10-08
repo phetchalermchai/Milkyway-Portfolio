@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Switchtheme from "./switchtheme";
-import { MenuIcons } from "./icons";
+import { MenuIcons , CloseIcons} from "./icons";
 import { IconButton } from "./button";
 
 // custom hook
@@ -39,7 +39,7 @@ export default function Navbar() {
             </div>
             <Switchtheme />
             <IconButton onClick={handleToggle} disabled={isLoading} pill={true} cssStyle="lg:hidden xl:hidden">
-              <MenuIcons/>
+              {isOpen === true ? <CloseIcons/> : <MenuIcons/>}
             </IconButton>
 
           </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
         >
           {navLink.map((value, key) => {
             return (
-              <Link key={key} href={`#${value}`} 
+              <Link key={key} href={`#${value}`} onClick={handleToggle}
                 className={
                   `hover:font-bold
                   ${isOpen
