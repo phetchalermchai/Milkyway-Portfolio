@@ -10,8 +10,10 @@ export function useNavtoggle() {
   const handleToggle = () => {
     if (isOpen === true) {
       setIsOpen(false);
+      document.body.classList.remove("overflow-y-hidden");  
     } else {
       setIsOpen(true);
+      document.body.classList.add("overflow-y-hidden");
     }
     setIsLoading(true);
     setIsClicked(true);
@@ -27,6 +29,7 @@ export function useNavtoggle() {
 
       if (newWidth > 1023) {
         setIsOpen(false);
+        document.body.classList.remove("overflow-y-hidden");
       }
     };
 
